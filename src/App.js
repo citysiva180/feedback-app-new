@@ -1,5 +1,15 @@
+import React from "react";
+import Header from "./components/Header";
+
 function App() {
-  return <h1>Hello from the App Component</h1>;
+  return (
+    <>
+      <Header />
+      <div className="container">
+        <h1>App</h1>
+      </div>
+    </>
+  );
 }
 
 export default App;
