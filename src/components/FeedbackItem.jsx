@@ -1,10 +1,17 @@
-function FeedbackItem() {
+import Card from "./shared/Card";
+import PropTypes from "prop-types";
+
+function FeedbackItem({ item }) {
   return (
-    <div className="card">
-      <div className="num-display">10</div>
-      <div className="text-display">This is an Example Feedback Item</div>
-    </div>
+    <Card reverse={true}>
+      <div className="num-display">{item.rating}</div>
+      <div className="text-display">{item.text}</div>
+    </Card>
   );
 }
+
+FeedbackItem.propTypes = {
+  item: PropTypes.object.isRequired,
+};
 
 export default FeedbackItem;
